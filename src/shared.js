@@ -1,4 +1,3 @@
-import hexToRgba from 'hex-to-rgba';
 import PropTypes from 'prop-types';
 import { Animated } from 'react-native';
 
@@ -21,8 +20,9 @@ export const getInterpolatedColor = (animation, primaryColor, secondaryColor) =>
   animation.interpolate({
     inputRange: [0, 1],
     outputRange: [
-      primaryColor.includes('rgb') ? primaryColor : hexToRgba(primaryColor),
-      secondaryColor.includes('rgba') ? secondaryColor : hexToRgba(secondaryColor)
+      //tomtom patch only support 'rgb' primaryColor and secondaryColor to remove use of GPL3.0 licensed hex-to-rgba library
+      primaryColor,
+      secondaryColor
     ]
   });
 
