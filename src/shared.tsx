@@ -1,4 +1,3 @@
-import hexToRgba from 'hex-to-rgba';
 import { Animated, ViewStyle } from 'react-native';
 
 export type WidthArrayType = number | string;
@@ -29,8 +28,8 @@ export const getInterpolatedColor = (animation: Animated.Value, primaryColor: Co
   animation.interpolate({
     inputRange: [0, 1],
     outputRange: [
-      primaryColor.includes('rgb') ? primaryColor : hexToRgba(primaryColor),
-      secondaryColor.includes('rgba') ? secondaryColor : hexToRgba(secondaryColor)
+      primaryColor,
+      secondaryColor
     ]
   });
 
