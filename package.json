@@ -40,7 +40,6 @@
     "react-native": "*"
   },
   "dependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^16.7.0"
+    "hex-to-rgba": "^2.0.1"
   }
 }
